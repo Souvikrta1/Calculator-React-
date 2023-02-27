@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
 
 export default class TopAction extends Component {
+
+    reset = () =>{
+        this.props.setReset()
+    }
+
+    delete = () =>{
+        this.props.setDelete()
+    }
+
+    calculation = (e) =>{
+        this.props.setExpression(e.target.value)
+    }
+
     render() {
         return (
             <div className='top-action'>

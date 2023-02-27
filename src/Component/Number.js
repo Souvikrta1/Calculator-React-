@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 
 export default class Number extends Component {
+
+    calculation = (e) =>{
+        this.props.setExpression(e.target.value)
+    }
+
+
+
     render() {
         return (
             <div className='numbers'>

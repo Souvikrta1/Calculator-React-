@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 
 export default class Action extends Component {
+
+    calculation = (e) =>{
+        if(this.props.current[this.props.current.length-1].match(/[0-9]/g) !== null){
+            this.props.setExpression(e.target.value)
+        }
+    }
+
+    result = () =>{
+        if(this.props.current !== '') this.props.setResult()
+    }
+
     render() {
         return (
             <div className='action'>
